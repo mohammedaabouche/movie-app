@@ -1,29 +1,27 @@
-<div class="container-fluid">
-  <div class="row row-cols-3">
+
+
+<div class="container-fluid debug">
+  <div class="row r row-cols-3">
     <div class="col">
-      <div class="film">
-        <img src="../../assets/harry-potter.jpeg" alt="...">
-        
-      </div>
-      
+      <app-film-item [film]="films[0]"></app-film-item>
+   
     </div>
     <div class="col">
-      <div class="film">
-        <img src="../../assets/avengers.jpeg" alt="..." >
-      </div>
-    </div>
-    <div class="col">
-      <div class="film">
-        <img src="../../assets/mission-impossible.jpeg" alt="...">
-      </div>
+    
+        <app-film-item [film]="films[1]"></app-film-item>
       
+    </div>
+      <div class="film">
+        <app-film-item [film]="films[2]"></app-film-item>
+     
+
     </div>
 
   
     <div class="col">
-      <div class="film">
-        <img src="../../assets/star-wars.jpeg" alt="...">
-      </div>
+     
+        <app-film-item [film]="films[3]"></app-film-item>
+
     </div>
   </div>  
  
