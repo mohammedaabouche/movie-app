@@ -1,0 +1,7 @@
+<div class="container-fluid film" [routerLink]="['/display-movies',film?.id]">
+    <img src="https://image.tmdb.org/t/p/w400{{film?.poster_path}}" alt="..." class="film-img">
+    <h1 class="film-title">{{film?.title}}</h1>
+
+</div>
+
+<router-outlet></router-outlet>

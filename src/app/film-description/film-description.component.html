@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row film-container">
+    <div class="col-4">
+      <img
+        class="film-img"
+        src="https://image.tmdb.org/t/p/w200{{ film?.poster_path }}"
+        alt="..."
+        class="film-img"
+      />
+      <div>
+        <button class="btn btn-primary favoris">add to favoris</button>
+      </div>
+    </div>
+
+    <div class="col film-info">
+      <h1 class="film-title">{{ film?.title }}</h1>
+      <div class="row">
+        <h2 class="col-3 film-desc-title">overview</h2>
+        <p class="col film-desc-value">{{ film?.overview }}</p>
+      </div>
+      <div class="row">
+        <h2 class="col-3 film-desc-title">Date release</h2>
+        <p class="col film-desc-value">{{ film?.release_date }}</p>
+      </div>
+      <div class="row">
+        <h2 class="col-3 film-desc-title">Rate</h2>
+        <p class="col film-desc-value">{{ film?.vote_average }}</p>
+      </div>
+      <div class="row">
+        <h2 class="col-3 film-desc-title">language</h2>
+        <p class="col film-desc-value">{{ film?.original_language }}</p>
+      </div>
+      <div class="row">
+        <h2 class="col-3 film-desc-title">age</h2>
+        <p class="col film-desc-value"  *ngIf="film?.adult">+18 ans</p>
+        <p class="col film-desc-value"  *ngIf="!film?.adult">+10 ans</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
