@@ -1,11 +1,21 @@
 
 .container-fluid{
-  
-    background: linear-gradient(0deg, rgba(1, 20, 44, 1) 0%, rgba(1, 20, 44, 1) 35%, rgba(2, 46, 100, 0.9) 100%);
+    padding-top: 2rem;
+    background: linear-gradient(135deg, #005f30, rgb(0, 33, 65));
     width: 100%;
     background-attachment: fixed;
 }
 
 .r{
     padding: 1rem 0;
+}
+
+.nav-container{
+    position: fixed;
+    top:0;
+    width: 100%;
+}
+.wrapper{
+    position: absolute;
+    top:0;
 }

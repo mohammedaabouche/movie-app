@@ -1,28 +1,11 @@
+<div class="wrapper">
+  <div class="nav-conatainer">
+    <app-navbar (searchEmitter)="performSearch($event)"></app-navbar>
+  </div>
 
-
-<div class="container-fluid debug">
-  <div class="row r row-cols-3">
-    <div class="col">
-      <app-film-item [film]="films[0]"></app-film-item>
-   
+  <div class="container-fluid debug">
+    <div class="row r row-cols-3">
+      <app-film-item *ngFor="let f of films" [film]="f"> </app-film-item>
     </div>
-    <div class="col">
-    
-        <app-film-item [film]="films[1]"></app-film-item>
-      
-    </div>
-      <div class="film">
-        <app-film-item [film]="films[2]"></app-film-item>
-     
-
-    </div>
-
-  
-    <div class="col">
-     
-        <app-film-item [film]="films[3]"></app-film-item>
-
-    </div>
-  </div>  
- 
+  </div>
 </div>
