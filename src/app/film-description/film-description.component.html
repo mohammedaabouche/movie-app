@@ -9,20 +9,14 @@
       />
 
       <button
-        *ngIf="!isFilmInFavorites()"
+
         class="btn btn-primary favoris"
         (click)="addFilmToFavorites(film)"
         
       >
         add to favoris
       </button>
-      <button
-        *ngIf="isFilmInFavorites()"
-        class="btn btn-primary favoris"
-        (click)="addFilmToFavorites(film)"
-      >
-        remove favoris
-      </button>
+    
     </div>
 
     <div class="col film-info">
@@ -50,6 +44,7 @@
       </div>
     </div>
   </div>
+  <app-comments [filmId]="film?.id||0" [comments]="comments"></app-comments>
 </div>
 
 <router-outlet></router-outlet>
