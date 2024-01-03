@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,11 @@ export class TmdbService {
   getMovieById(id: any) {
     return this.httpclient.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${this.apiKey}`);
   }
+  searchMovies(query: string): Observable<any> {
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${query}`;
+    return this.httpclient.get(url);
+  }
+  
 }
 
 

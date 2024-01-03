@@ -7,9 +7,22 @@
         alt="..."
         class="film-img"
       />
-      <div>
-        <button class="btn btn-primary favoris">add to favoris</button>
-      </div>
+
+      <button
+        *ngIf="!isFilmInFavorites()"
+        class="btn btn-primary favoris"
+        (click)="addFilmToFavorites(film)"
+        
+      >
+        add to favoris
+      </button>
+      <button
+        *ngIf="isFilmInFavorites()"
+        class="btn btn-primary favoris"
+        (click)="addFilmToFavorites(film)"
+      >
+        remove favoris
+      </button>
     </div>
 
     <div class="col film-info">
@@ -32,8 +45,8 @@
       </div>
       <div class="row">
         <h2 class="col-3 film-desc-title">age</h2>
-        <p class="col film-desc-value"  *ngIf="film?.adult">+18 ans</p>
-        <p class="col film-desc-value"  *ngIf="!film?.adult">+10 ans</p>
+        <p class="col film-desc-value" *ngIf="film?.adult">+18 ans</p>
+        <p class="col film-desc-value" *ngIf="!film?.adult">+10 ans</p>
       </div>
     </div>
   </div>

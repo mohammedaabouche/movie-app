@@ -1,0 +1,6 @@
+{
+  "routes": [
+    "/display-movies",
+    "/sign"
+  ]
+}
