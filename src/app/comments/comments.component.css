@@ -1,0 +1,65 @@
+.container{
+   
+    padding: 5rem;
+   
+
+}
+label{
+    color: aliceblue;
+    padding: 0.5rem 0.5rem;
+
+}
+textarea{
+    width: 100%;
+    height: 10rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 1rem;
+}
+button{
+    padding: 0.5rem 2rem;
+    background-color: gold;
+    border: none;
+    font-weight: bold;
+    color: black;
+}
+button:hover{
+    background-color: #c49c00;
+    cursor: pointer;
+}
+.title{
+    color: aliceblue;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+    text-transform: capitalize;
+   
+}
+h5{
+    color: rgb(0, 117, 49);
+    font-size: 1.2rem;
+    font-weight: bold;
+  
+   
+    text-transform: capitalize;
+   
+}
+h6{
+    color: rgb(0, 117, 49);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    
+ 
+   
+}
+p{
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0 0.5rem;
+    
+    text-transform: capitalize;
+}
