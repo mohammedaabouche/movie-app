@@ -1,9 +1,20 @@
 <nav class="navbar">
-    <div class="navbar-brand">
-      movie-app
+  <div class="navbar-brand">movie-app</div>
+  <div class="search-bar">
+    <input
+      type="text"
+      [(ngModel)]="query"
+      (input)="searchMovies()"
+      placeholder="Search movies..."
+    />
+  </div>
+  <ng-container class="btn-toolbar" *ngIf="signedIn; else elseBlock">
+    <div class="">
+      <button class="btn" [routerLink]="['/favoris']">Favoris</button>
+      <button class="btn" (click)="signOut()">Sign Out</button>
     </div>
-    <div class="search-bar">
-      <input type="text" placeholder="Search..."  >
-    </div>
+  </ng-container>
+  <ng-template #elseBlock>
+    <button class="btn" [routerLink]="['/sign']">Sign In</button>
+  </ng-template>
 </nav>
-  
